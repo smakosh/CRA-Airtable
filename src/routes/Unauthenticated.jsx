@@ -1,0 +1,13 @@
+import React from "react";
+import { Router } from "@reach/router";
+import Login from "containers/Login";
+import NotFound from "components/common/NotFound";
+
+export default () => {
+  return (
+    <Router>
+      <Login path="/" component={Login} />
+      <NotFound default component={NotFound} />
+    </Router>
+  );
+};

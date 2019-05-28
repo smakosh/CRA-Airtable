@@ -6,9 +6,11 @@
     "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
     "react": "^16.8.6",
+    "react-content-loader": "^4.2.1",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "unnamed": "^1.2.6"
   },
   "scripts": {
     "start": "react-scripts start",

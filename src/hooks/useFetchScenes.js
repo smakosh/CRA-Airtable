@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default () => {
   const [loading, setLoading] = useState(true);
-  const [scenes, setScenes] = useState([]);
+  const [data, setData] = useState([]);
   const [errors, setErrors] = useState(null);
 
   const fetchViews = async () => {
@@ -13,7 +13,7 @@ export default () => {
           process.env.REACT_APP_AIRTABLE_API_KEY
         }`
       );
-      setScenes(data.records);
+      setData(data.records);
       setLoading(false);
     } catch (err) {
       setErrors(err);
@@ -25,5 +25,5 @@ export default () => {
     fetchViews();
   }, []);
 
-  return [loading, scenes, errors];
+  return [loading, data, errors];
 };

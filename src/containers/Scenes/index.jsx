@@ -2,10 +2,11 @@ import React from "react";
 import useFetchScenes from "hooks/useFetchScenes";
 import Container from "components/common/Container";
 import Card from "components/common/Card";
+import CardSkeleton from "components/common/Loaders/CardSkeleton";
 import { Wrapper, Flex, CardScene } from "./styles";
 
 export default () => {
-  const [loading, scenes, errors] = useFetchScenes();
+  const [loading, data, errors] = useFetchScenes();
 
   if (errors) {
     console.log(errors);
@@ -15,11 +16,21 @@ export default () => {
   return (
     <Wrapper as={Container}>
       <h2>Scenes</h2>
-      {loading ? (
-        <span>Fetching scenes....</span>
-      ) : (
-        <Flex>
-          {scenes.map(({ fields: { Name, Location, Attachments } }, i) => (
+      <Flex>
+        {loading ? (
+          <>
+            <CardScene>
+              <CardSkeleton />
+            </CardScene>
+            <CardScene>
+              <CardSkeleton />
+            </CardScene>
+            <CardScene>
+              <CardSkeleton />
+            </CardScene>
+          </>
+        ) : (
+          data.map(({ fields: { Name, Location, Attachments } }, i) => (
             <CardScene key={i}>
               <Card
                 title={Name}
@@ -27,9 +38,9 @@ export default () => {
                 image={Attachments[0].thumbnails.large.url}
               />
             </CardScene>
-          ))}
-        </Flex>
-      )}
+          ))
+        )}
+      </Flex>
     </Wrapper>
   );
 };

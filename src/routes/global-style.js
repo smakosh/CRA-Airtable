@@ -6,6 +6,11 @@ const Theme = createGlobalStyle`
   html {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
     a {
       text-decoration: none;
     }

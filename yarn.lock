@@ -7951,6 +7951,11 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
+react-content-loader@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-4.2.1.tgz#0d355134ed7d0987966abd0f784bc59e76976e91"
+  integrity sha512-XA5irUvZpQAEavfUBo7kc4tdvAbWwVKJolz/+2Pkj/XU7pn78AweAUtn+AxEajN0Srg/mraJ8XMKlUsXOFiknw==
+
 react-dev-utils@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.0.1.tgz#5c03d85a0b2537d0c46af7165c24a7dfb274bef2"
@@ -9495,6 +9500,11 @@ universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+
+unnamed@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/unnamed/-/unnamed-1.2.6.tgz#df009bec7b677d34a9538993bdbfd011455e1f19"
+  integrity sha512-qvjG2G51HdslTQioajpxq5MsvQ1Ib52fYvdoTHBHE1Jclw0MGaL8ugbD8C4mJiRNb1ea2dWXQeeYXQpxrScVuQ==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
