@@ -29,7 +29,6 @@ export default ({ id }) => {
 
   return (
     <Wrapper as={Container}>
-      <h2>Scenes</h2>
       {loading ? (
         <>
           <CardScene>
@@ -37,21 +36,24 @@ export default ({ id }) => {
           </CardScene>
         </>
       ) : (
-        <CardScene>
-          <Card
-            title={data.fields.Name}
-            description={data.fields.Location}
-            setEdit={setEdit}
-            edit={edit}
-            SceneId={id}
-            image={
-              data.fields.Attachments[0].thumbnails
-                ? data.fields.Attachments[0].thumbnails.large.url
-                : "https://via.placeholder.com/500x500"
-            }
-            deleteScene={deleteScene}
-          />
-        </CardScene>
+        <>
+          <h2>data.fields.Name</h2>
+          <CardScene>
+            <Card
+              title={data.fields.Name}
+              description={data.fields.Location}
+              setEdit={setEdit}
+              edit={edit}
+              SceneId={id}
+              image={
+                data.fields.Attachments[0].thumbnails
+                  ? data.fields.Attachments[0].thumbnails.large.url
+                  : "https://via.placeholder.com/500x500"
+              }
+              deleteScene={deleteScene}
+            />
+          </CardScene>
+        </>
       )}
     </Wrapper>
   );
