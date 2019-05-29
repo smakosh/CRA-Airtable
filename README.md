@@ -1,5 +1,7 @@
 # CRA + Airtable starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0ed0a8f4-c0ac-46a8-abcb-ace723037ac8/deploy-status)](https://app.netlify.com/sites/cra-airtable-starter/deploys)
+
 ## Prerequisites
 
 [Yarn](https://yarnpkg.com/en/)
