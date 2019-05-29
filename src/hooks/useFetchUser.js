@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import setAuthToken from "helpers/setAuthToken";
 
 export default (user, dispatch) => {
   const [loading, setLoading] = useState(true);
@@ -17,8 +18,7 @@ export default (user, dispatch) => {
         //   },
         // })
 
-        // TODO: Set the new generated token
-        // await setAuthToken(token)
+        setAuthToken(`Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`);
 
         // TODO: Save the logged in user details
         await dispatch({ type: "SAVE_USER", payload: { username: "Smakosh" } });

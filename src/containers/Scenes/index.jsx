@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 import useFetchScenes from "hooks/useFetchScenes";
 import Container from "components/common/Container";
 import Card from "components/common/Card";
@@ -28,15 +29,24 @@ export default () => {
             <CardScene>
               <CardSkeleton />
             </CardScene>
+            <CardScene>
+              <CardSkeleton />
+            </CardScene>
           </>
         ) : (
-          data.map(({ fields: { Name, Location, Attachments } }, i) => (
-            <CardScene key={i}>
-              <Card
-                title={Name}
-                description={Location}
-                image={Attachments[0].thumbnails.large.url}
-              />
+          data.map(({ id, fields: { Name, Location, Attachments } }) => (
+            <CardScene key={id}>
+              <Link to={`/scene/${id}`}>
+                <Card
+                  title={Name}
+                  description={Location}
+                  image={
+                    Attachments[0].thumbnails
+                      ? Attachments[0].thumbnails.large.url
+                      : "https://via.placeholder.com/500x500"
+                  }
+                />
+              </Link>
             </CardScene>
           ))
         )}

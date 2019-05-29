@@ -17,6 +17,10 @@ export const Title = styled.div`
   h3 {
     margin: 0;
   }
+
+  button:first-child {
+    margin-right: 1rem;
+  }
 `;
 
 export const Description = styled.div`

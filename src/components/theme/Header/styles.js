@@ -25,8 +25,13 @@ export const Links = styled.div`
   display: flex;
   align-items: center;
 
+  a {
+    margin: 0 1rem;
+  }
+
+  a:last-child,
   a:first-child {
-    margin-right: 1rem;
+    margin: unset;
   }
 
   @media (max-width: 680px) {

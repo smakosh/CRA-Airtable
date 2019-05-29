@@ -11,8 +11,13 @@ export default ({ isLoggedIn, logout }) => (
       </Link>
       {isLoggedIn && (
         <Links>
+          <Link to="/add">Add new Scene</Link>
           <Link to="/">Scenes</Link>
-          <button type="button" onClick={logout}>
+          <button
+            type="button"
+            className="btn btn-rounded gradient-green"
+            onClick={logout}
+          >
             Logout
           </button>
         </Links>
